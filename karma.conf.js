@@ -10,7 +10,7 @@ module.exports = config => config.set({
     }
   },
   files: [
-    'test/*.js'
+    '../src/app/*.spec.ts'
   ],
   // This example uses mocha and chai, but we could use something else, jasmine for example
   frameworks: ['mocha', 'chai'],

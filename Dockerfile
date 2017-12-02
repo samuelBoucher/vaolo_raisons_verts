@@ -2,12 +2,8 @@ FROM ubuntu:14.04
 
 # Update ubuntu, install curl, install git, install clean and install vim
 RUN apt-get update && \
-	apt-get install -y curl git wget vim python build-essential &&\
+	apt-get install -y curl git wget nano python build-essential &&\
 	apt-get clean
-	
-# Configure Github
-RUN git config --global user.email "samuel.boucher@outlook.com" &&\
-	git config --global user.name "samuelBoucher"
 
 # Install Nnode version manager
 ENV NVM_DIR /usr/local/nvm
@@ -35,15 +31,14 @@ RUN sudo sh -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >>
 	&& sudo apt-get update \
 	&& sudo apt-get install -y google-chrome-stable
 
-RUN git clone https://github.com/ionic-team/ionic-unit-testing-example.git
+RUN git clone https://github.com/samuelBoucher/vaolo_raisons_verts.git
 
-COPY karma.conf.js ionic-unit-testing-example/test-config/karma.conf.js
-COPY package.json ionic-unit-testing-example/package.json
+WORKDIR vaolo_raisons_verts/Vaolo
 
-WORKDIR ionic-unit-testing-example
+COPY karma.conf.js test-config/karma.conf.js
+COPY package.json package.json
 
 RUN npm install
 RUN npm install is-docker karma-mocha karma-chai karma-mocha-reporter karma-junit-reporter mocha chai
 
-CMD npm run test
 
