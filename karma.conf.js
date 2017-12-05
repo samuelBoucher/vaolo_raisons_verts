@@ -1,4 +1,5 @@
 const isDocker = require('is-docker')();
+var webpackConfig = require('./webpack.test.js');
 
 module.exports = config => config.set({
   customLaunchers: {
@@ -9,19 +10,37 @@ module.exports = config => config.set({
       flags: isDocker ? ['--no-sandbox'] : []
     }
   },
-  files: [
-    '../src/app/*.spec.ts'
-  ],
-  // This example uses mocha and chai, but we could use something else, jasmine for example
-  frameworks: ['mocha', 'chai'],
-  plugins: [
-    require('karma-mocha'),
-    require('karma-chai'),
-    require('karma-chrome-launcher'),
-    require('karma-mocha-reporter'),
-    require('karma-junit-reporter')
-  ],
-  junitReporter: {
-    outputDir: 'build'
-  }
+
+
+  basePath: '',
+
+    frameworks: ['jasmine'],
+
+    files: [
+      {pattern: './karma-test-shim.js', watched: true}
+    ],
+
+    preprocessors: {
+      './karma-test-shim.js': ['webpack', 'sourcemap']
+    },
+
+    webpack: webpackConfig,
+
+    webpackMiddleware: {
+      stats: 'errors-only'
+    },
+
+    webpackServer: {
+      noInfo: true
+    },
+
+    reporters: ['kjhtml', 'dots'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    singleRun: false
+
 });
+
+

@@ -39,6 +39,8 @@ COPY karma.conf.js test-config/karma.conf.js
 COPY package.json package.json
 
 RUN npm install
-RUN npm install is-docker karma-mocha karma-chai karma-mocha-reporter karma-junit-reporter mocha chai
+RUN npm install is-docker karma-junit-reporter
+
+CMD npm test
 
 
