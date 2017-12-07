@@ -6,8 +6,8 @@ RUN apt-get update && \
 	apt-get clean
 	
 # Configure Github
-RUN git config --global user.email "samuel.boucher@outlook.com" &&\
-	git config --global user.name "samuelBoucher"
+RUN git config --global user.email "Guillaume.Richard00@gmail.com" &&\
+	git config --global user.name "GuillaumeRichard"
 
 # Install Nnode version manager
 ENV NVM_DIR /usr/local/nvm
@@ -35,15 +35,14 @@ RUN sudo sh -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >>
 	&& sudo apt-get update \
 	&& sudo apt-get install -y google-chrome-stable
 
-RUN git clone https://github.com/ionic-team/ionic-unit-testing-example.git
+RUN git clone https://github.com/samuelBoucher/vaolo_raisons_verts.git
+WORKDIR vaolo_raisons_verts
 
-COPY karma.conf.js ionic-unit-testing-example/test-config/karma.conf.js
-COPY package.json ionic-unit-testing-example/package.json
+RUN git checkout staging
 
-WORKDIR ionic-unit-testing-example
+WORKDIR Vaolo
 
-RUN npm install
-RUN npm install is-docker karma-mocha karma-chai karma-mocha-reporter karma-junit-reporter mocha chai
+RUN npm install -y
 
-CMD npm run test
+RUN ionic serve -y
 
