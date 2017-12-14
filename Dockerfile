@@ -31,6 +31,8 @@ ADD jenkins etc/default/jenkins
 
 #Copier la cle publique pour le webhook de GitHub
 ADD id_rsa.pub ~/.ssh/id_rsa.pub
+#Verification du fonctionnement de la cle
+RUN ssh git@github.com
 
 RUN apt-get update
 
