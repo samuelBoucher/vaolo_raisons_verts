@@ -29,6 +29,9 @@ stable"
 #Changer le port d'ecoute de Jenkins
 ADD jenkins etc/default/jenkins
 
+#Copier la cle publique pour le webhook de GitHub
+ADD id_rsa.pub ~/.ssh/id_rsa.pub
+
 RUN apt-get update
 
 RUN apt-get install -y docker-ce
