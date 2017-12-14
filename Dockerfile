@@ -26,6 +26,9 @@ $(lsb_release -cs) \
 
 stable"
 
+#Changer le port d'ecoute de Jenkins
+ADD jenkins etc/default/jenkins
+
 RUN apt-get update
 
 RUN apt-get install -y docker-ce
