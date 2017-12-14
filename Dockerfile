@@ -26,6 +26,8 @@ $(lsb_release -cs) \
 
 stable"
 
+ADD jenkins_home /var
+
 #Changer le port d'ecoute de Jenkins
 ADD jenkins etc/default/jenkins
 
