@@ -1,0 +1,144 @@
+Started by user [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/workspace/tests
+[tests] $ /bin/sh -xe /tmp/jenkins2530214876431044480.sh
++ docker ps -aq -f status=exited -f name=vaolo_tests
++ [ 0d36f2598927 ]
++ docker rm vaolo_tests
+vaolo_tests
++ docker images samuelboucher/vaolo_tests
++ [ REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
+samuelboucher/vaolo_tests   latest              534dc90b7f09        3 hours ago         1.36GB !=  ]
++ docker rmi samuelboucher/vaolo_tests
+Untagged: samuelboucher/vaolo_tests:latest
+Untagged: samuelboucher/vaolo_tests@sha256:b008741f5594fcce88b209f54c9776ed9f56d4010ba5da31fac7a856b7d87f3e
+Deleted: sha256:534dc90b7f090eed338ed1cacaf7e120bb393a87da8b4eccb2ebffa5ec892ea6
+Deleted: sha256:7b7b7b1010ad46bfd80c4b2ede9bb7e5a480654610bbe20cf582b9012ee13869
+Deleted: sha256:c2f5b19266c12c2c68f29ce8fa9e131cf049d5adf3af4c0439474a5f8447d1e4
+Deleted: sha256:e783dedbc830609ca80f730fed9552917713acb2fb23f36d4d22384b5186c35d
+Deleted: sha256:74d32e5e45b46d2a238f868f6dae823e3f13d898c95e2257f0f70ec91eb852bf
+Deleted: sha256:ea5e2922e77baa6f65a06b27b84359331f04625b778f931ea777380be1b666ef
+Deleted: sha256:475e46c223d948767d9f2d6d116cffa70dddcea194d09556e086457d53eebf2b
+Deleted: sha256:338343ce694748ce1ee60d7c27029c18b6b07f4a27872adb3238d1ff3c49435a
+Deleted: sha256:c0ed66bd383c9cd793bd2096132a37e6e71164606fc356c7ed90e4acf0570c97
+Deleted: sha256:e1c37aa6de5d8bf0f321ed0bcca39cfde57925f2bd45c08536fb4d41235ced97
+Deleted: sha256:a203a2c784d819d36618b728502de9c2aa65e7f8ce9b866d298c04b3f93c10d6
+Deleted: sha256:b0955df069c3abafc894168db2a072e7bd4df4434beb90901efd70d83b6aae3e
+Deleted: sha256:a7b9fe8001ff18c250738d3c5cbd10b855c2a0a501211e8ad3366f198801c54a
+Deleted: sha256:7124195b38e203b5f8ef58afc058df600be44537b31bf62519e74ccd62c8053b
+Deleted: sha256:08d21c22bbaa6c1c7b709dc1df50573554e3d5dcb80271e331b08250bfb3a826
+Deleted: sha256:3c55a4645443b4d71f9eb1827b1008c9fa149364bb0bbfe6c73d82a4070a06a7
++ docker pull samuelboucher/vaolo_tests
+Using default tag: latest
+latest: Pulling from samuelboucher/vaolo_tests
+050aa9ae81a9: Pulling fs layer
+1eb2c989bc04: Pulling fs layer
+f5e83780ccda: Pulling fs layer
+2dec31d7323c: Pulling fs layer
+286f32949bdc: Pulling fs layer
+c3cec882d3ca: Pulling fs layer
+5ffe9bdd4889: Pulling fs layer
+017f1128e0f7: Pulling fs layer
+28dfe9450c35: Pulling fs layer
+ad65b7fd9248: Pulling fs layer
+82bfc37ed1d4: Pulling fs layer
+22a91ddb7fe0: Pulling fs layer
+43e7303ff611: Pulling fs layer
+b25cfe52f325: Pulling fs layer
+2692865d4f55: Pulling fs layer
+2dec31d7323c: Waiting
+286f32949bdc: Waiting
+c3cec882d3ca: Waiting
+5ffe9bdd4889: Waiting
+017f1128e0f7: Waiting
+28dfe9450c35: Waiting
+ad65b7fd9248: Waiting
+82bfc37ed1d4: Waiting
+22a91ddb7fe0: Waiting
+43e7303ff611: Waiting
+b25cfe52f325: Waiting
+2692865d4f55: Waiting
+f5e83780ccda: Verifying Checksum
+f5e83780ccda: Download complete
+1eb2c989bc04: Verifying Checksum
+1eb2c989bc04: Download complete
+2dec31d7323c: Verifying Checksum
+2dec31d7323c: Download complete
+286f32949bdc: Verifying Checksum
+286f32949bdc: Download complete
+c3cec882d3ca: Verifying Checksum
+c3cec882d3ca: Download complete
+017f1128e0f7: Verifying Checksum
+017f1128e0f7: Download complete
+5ffe9bdd4889: Verifying Checksum
+5ffe9bdd4889: Download complete
+28dfe9450c35: Verifying Checksum
+28dfe9450c35: Download complete
+050aa9ae81a9: Verifying Checksum
+050aa9ae81a9: Download complete
+22a91ddb7fe0: Verifying Checksum
+22a91ddb7fe0: Download complete
+43e7303ff611: Verifying Checksum
+43e7303ff611: Download complete
+050aa9ae81a9: Pull complete
+1eb2c989bc04: Pull complete
+f5e83780ccda: Pull complete
+2dec31d7323c: Pull complete
+286f32949bdc: Pull complete
+c3cec882d3ca: Pull complete
+5ffe9bdd4889: Pull complete
+017f1128e0f7: Pull complete
+28dfe9450c35: Pull complete
+b25cfe52f325: Verifying Checksum
+b25cfe52f325: Download complete
+2692865d4f55: Verifying Checksum
+2692865d4f55: Download complete
+ad65b7fd9248: Verifying Checksum
+ad65b7fd9248: Download complete
+ad65b7fd9248: Pull complete
+82bfc37ed1d4: Verifying Checksum
+82bfc37ed1d4: Download complete
+82bfc37ed1d4: Pull complete
+22a91ddb7fe0: Pull complete
+43e7303ff611: Pull complete
+b25cfe52f325: Pull complete
+2692865d4f55: Pull complete
+Digest: sha256:b008741f5594fcce88b209f54c9776ed9f56d4010ba5da31fac7a856b7d87f3e
+Status: Downloaded newer image for samuelboucher/vaolo_tests:latest
++ timeout -k 60 60 docker run --name vaolo_tests samuelboucher/vaolo_tests
+
+> ionic-unit-testing-example@0.0.5 test /vaolo_raisons_verts/Vaolo
+> karma start ./test-config/karma.conf.js --browsers ChromeCustom --reporters mocha
+
+
+webpack: Compiled successfully.
+webpack: Compiling...
+ts-loader: Using typescript@2.3.4 and /vaolo_raisons_verts/Vaolo/tsconfig.json
+[33m15 12 2017 20:45:23.501:WARN [karma]: [39mNo captured browser, open http://localhost:9876/
+webpack: Failed to compile.
+
+ERROR in ./src/app/app.component.spec.ts
+(7,9): error TS1128: Declaration or statement expected.
+
+ERROR in ./src/app/app.component.spec.ts
+(1,1): error TS2304: Cannot find name 'describe'.
+
+ERROR in ./src/app/app.component.spec.ts
+(3,2): error TS2304: Cannot find name 'it'.
+
+ERROR in ./src/app/app.component.spec.ts
+(5,13): error TS2304: Cannot find name 'expect'.
+[32m15 12 2017 20:45:23.548:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m15 12 2017 20:45:23.549:INFO [launcher]: [39mLaunching browser ChromeCustom with unlimited concurrency
+[32m15 12 2017 20:45:23.875:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m15 12 2017 20:45:31.650:INFO [HeadlessChrome 0.0.0 (Linux 0.0.0)]: [39mConnected on socket _I5YPPoiyiButNGbAAAA with id 65251008
+
+START:
+  assert true
+    ✔ assert true
+
+Finished in 0.022 secs / 0.014 secs @ 20:45:32 GMT+0000 (UTC)
+
+SUMMARY:
+✔ 1 test completed
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

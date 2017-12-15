@@ -1,0 +1,11 @@
+Started by user [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/workspace/tests
+[tests] $ /bin/sh -xe /tmp/jenkins4674014808404051444.sh
++ docker stop tests
+tests
++ docker rm tests
+tests
++ timeout 60 -k 60 docker run --name tests samuelboucher/vaolo_tests
+timeout: failed to run command ‘-k’: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

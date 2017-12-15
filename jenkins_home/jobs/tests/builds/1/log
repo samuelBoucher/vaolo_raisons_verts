@@ -1,0 +1,86 @@
+Started by user [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/workspace/tests
+[tests] $ /bin/sh -xe /tmp/jenkins9006108935401059481.sh
++ docker pull samuelboucher/vaolo_tests
+Using default tag: latest
+latest: Pulling from samuelboucher/vaolo_tests
+050aa9ae81a9: Pulling fs layer
+1eb2c989bc04: Pulling fs layer
+f5e83780ccda: Pulling fs layer
+2dec31d7323c: Pulling fs layer
+286f32949bdc: Pulling fs layer
+afa0969eee54: Pulling fs layer
+89eed9c57e2d: Pulling fs layer
+ef139b9890a4: Pulling fs layer
+316b7433b27c: Pulling fs layer
+a032291c6131: Pulling fs layer
+db2ea53517d3: Pulling fs layer
+6360cdb71ab0: Pulling fs layer
+dbc7005ed2c9: Pulling fs layer
+864c31d2843d: Pulling fs layer
+7037c13e27ff: Pulling fs layer
+2dec31d7323c: Waiting
+286f32949bdc: Waiting
+afa0969eee54: Waiting
+89eed9c57e2d: Waiting
+ef139b9890a4: Waiting
+316b7433b27c: Waiting
+a032291c6131: Waiting
+db2ea53517d3: Waiting
+6360cdb71ab0: Waiting
+dbc7005ed2c9: Waiting
+864c31d2843d: Waiting
+7037c13e27ff: Waiting
+f5e83780ccda: Verifying Checksum
+f5e83780ccda: Download complete
+1eb2c989bc04: Verifying Checksum
+1eb2c989bc04: Download complete
+286f32949bdc: Verifying Checksum
+286f32949bdc: Download complete
+2dec31d7323c: Verifying Checksum
+2dec31d7323c: Download complete
+afa0969eee54: Verifying Checksum
+afa0969eee54: Download complete
+ef139b9890a4: Verifying Checksum
+ef139b9890a4: Download complete
+89eed9c57e2d: Verifying Checksum
+89eed9c57e2d: Download complete
+050aa9ae81a9: Verifying Checksum
+050aa9ae81a9: Download complete
+316b7433b27c: Verifying Checksum
+316b7433b27c: Download complete
+6360cdb71ab0: Verifying Checksum
+6360cdb71ab0: Download complete
+dbc7005ed2c9: Verifying Checksum
+dbc7005ed2c9: Download complete
+050aa9ae81a9: Pull complete
+1eb2c989bc04: Pull complete
+f5e83780ccda: Pull complete
+2dec31d7323c: Pull complete
+286f32949bdc: Pull complete
+afa0969eee54: Pull complete
+89eed9c57e2d: Pull complete
+ef139b9890a4: Pull complete
+316b7433b27c: Pull complete
+db2ea53517d3: Verifying Checksum
+db2ea53517d3: Download complete
+7037c13e27ff: Verifying Checksum
+7037c13e27ff: Download complete
+864c31d2843d: Verifying Checksum
+864c31d2843d: Download complete
+a032291c6131: Verifying Checksum
+a032291c6131: Download complete
+a032291c6131: Pull complete
+db2ea53517d3: Pull complete
+6360cdb71ab0: Pull complete
+dbc7005ed2c9: Pull complete
+864c31d2843d: Pull complete
+7037c13e27ff: Pull complete
+Digest: sha256:9bd2680281d3330a391db216235700d7c45b3385b2ea0c1c88b80c655e46837a
+Status: Downloaded newer image for samuelboucher/vaolo_tests:latest
++ docker run --name tests vaolo_tests
+Unable to find image 'vaolo_tests:latest' locally
+docker: Error response from daemon: repository vaolo_tests not found: does not exist or no pull access.
+See 'docker run --help'.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

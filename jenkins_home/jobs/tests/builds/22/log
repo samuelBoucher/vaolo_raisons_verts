@@ -1,0 +1,53 @@
+Started by user [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/workspace/tests
+[tests] $ /bin/sh -xe /tmp/jenkins7860745005525035220.sh
++ docker ps -aq -f status=exited -f name=vaolo_tests
++ [ 54d1bb6aba42 ]
++ docker rm vaolo_tests
+vaolo_tests
++ docker images -q samuelboucher/vaolo_tests
++ [[ 534dc90b7f09 !=  ]]
+/tmp/jenkins7860745005525035220.sh: 7: /tmp/jenkins7860745005525035220.sh: [[: not found
++ docker pull samuelboucher/vaolo_tests
+Using default tag: latest
+latest: Pulling from samuelboucher/vaolo_tests
+Digest: sha256:b008741f5594fcce88b209f54c9776ed9f56d4010ba5da31fac7a856b7d87f3e
+Status: Image is up to date for samuelboucher/vaolo_tests:latest
++ timeout -k 60 60 docker run --name vaolo_tests samuelboucher/vaolo_tests
+
+> ionic-unit-testing-example@0.0.5 test /vaolo_raisons_verts/Vaolo
+> karma start ./test-config/karma.conf.js --browsers ChromeCustom --reporters mocha
+
+
+webpack: Compiled successfully.
+webpack: Compiling...
+ts-loader: Using typescript@2.3.4 and /vaolo_raisons_verts/Vaolo/tsconfig.json
+[33m15 12 2017 20:34:09.353:WARN [karma]: [39mNo captured browser, open http://localhost:9876/
+
+ERROR in ./src/app/app.component.spec.ts
+(7,9): error TS1128: Declaration or statement expected.
+
+ERROR in ./src/app/app.component.spec.ts
+(1,1): error TS2304: Cannot find name 'describe'.
+
+ERROR in ./src/app/app.component.spec.ts
+(3,2): error TS2304: Cannot find name 'it'.
+
+ERROR in ./src/app/app.component.spec.ts
+(5,13): error TS2304: Cannot find name 'expect'.
+webpack: Failed to compile.
+[32m15 12 2017 20:34:09.367:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m15 12 2017 20:34:09.371:INFO [launcher]: [39mLaunching browser ChromeCustom with unlimited concurrency
+[32m15 12 2017 20:34:09.705:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m15 12 2017 20:34:11.765:INFO [HeadlessChrome 0.0.0 (Linux 0.0.0)]: [39mConnected on socket OhHNGB6CWPwTWflMAAAA with id 55490869
+
+START:
+  assert true
+    ✔ assert true
+
+Finished in 0.021 secs / 0.003 secs @ 20:34:12 GMT+0000 (UTC)
+
+SUMMARY:
+✔ 1 test completed
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

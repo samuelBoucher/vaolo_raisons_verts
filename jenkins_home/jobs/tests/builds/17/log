@@ -1,0 +1,13 @@
+Started by user [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/workspace/tests
+[tests] $ /bin/sh -xe /tmp/jenkins8297969638457439761.sh
++ docker pull samuelboucher/vaolo_tests
+Using default tag: latest
+latest: Pulling from samuelboucher/vaolo_tests
+Digest: sha256:b008741f5594fcce88b209f54c9776ed9f56d4010ba5da31fac7a856b7d87f3e
+Status: Image is up to date for samuelboucher/vaolo_tests:latest
++ timeout -k 60 60 docker run --name tests samuelboucher/vaolo_tests
+docker: Error response from daemon: Conflict. The container name "/tests" is already in use by container ddae0a77639baa7de8cd6832c13025408ea532696401790eb4943d9b2427d020. You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

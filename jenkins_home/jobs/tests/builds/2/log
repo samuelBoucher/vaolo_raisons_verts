@@ -1,0 +1,47 @@
+Started by user [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/workspace/tests
+[tests] $ /bin/sh -xe /tmp/jenkins5294171356046178129.sh
++ docker pull samuelboucher/vaolo_tests
+Using default tag: latest
+latest: Pulling from samuelboucher/vaolo_tests
+Digest: sha256:9bd2680281d3330a391db216235700d7c45b3385b2ea0c1c88b80c655e46837a
+Status: Image is up to date for samuelboucher/vaolo_tests:latest
++ docker run --name tests samuelboucher/vaolo_tests
+
+> ionic-unit-testing-example@0.0.5 test /vaolo_raisons_verts/Vaolo
+> karma start ./test-config/karma.conf.js --browsers ChromeCustom --reporters mocha
+
+
+webpack: Compiled successfully.
+webpack: Compiling...
+ts-loader: Using typescript@2.3.4 and /vaolo_raisons_verts/Vaolo/tsconfig.json
+[33m15 12 2017 16:02:31.833:WARN [karma]: [39mNo captured browser, open http://localhost:9876/
+
+ERROR in ./src/app/app.component.spec.ts
+(7,9): error TS1128: Declaration or statement expected.
+
+ERROR in ./src/app/app.component.spec.ts
+(1,1): error TS2304: Cannot find name 'describe'.
+
+ERROR in ./src/app/app.component.spec.ts
+(3,2): error TS2304: Cannot find name 'it'.
+
+ERROR in ./src/app/app.component.spec.ts
+(5,13): error TS2304: Cannot find name 'expect'.
+webpack: Failed to compile.
+[32m15 12 2017 16:02:32.035:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m15 12 2017 16:02:32.035:INFO [launcher]: [39mLaunching browser ChromeCustom with unlimited concurrency
+[32m15 12 2017 16:02:32.050:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m15 12 2017 16:02:38.991:INFO [HeadlessChrome 0.0.0 (Linux 0.0.0)]: [39mConnected on socket XVl4PP283XnZzIreAAAA with id 91691196
+
+START:
+  assert true
+    ✔ assert true
+
+Finished in 0.011 secs / 0.003 secs @ 16:02:39 GMT+0000 (UTC)
+
+SUMMARY:
+✔ 1 test completed
+Build was aborted
+Aborted by [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Finished: ABORTED
