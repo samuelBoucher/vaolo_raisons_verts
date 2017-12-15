@@ -13,7 +13,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>docker run hello-world</command>
+      <command>if [ &quot;$(docker ps -aq -f status=exited -f name=vaolo_tests)&quot; ]; then
+        # cleanup
+        docker rm vaolo_tests
+fi
+
+if [ &quot;$(docker images samuelboucher/vaolo_tests 2&gt; /dev/null)&quot; != &quot;&quot; ]; then
+  docker rmi samuelboucher/vaolo_tests
+fi
+
+docker pull samuelboucher/vaolo_tests
+timeout -k 60 60 docker run --name vaolo_tests samuelboucher/vaolo_tests
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

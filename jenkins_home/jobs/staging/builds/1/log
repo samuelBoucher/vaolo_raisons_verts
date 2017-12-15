@@ -1,0 +1,8 @@
+Started by user [8mha:////4LxC/k9rUIEwxqu5qcKwLAC7XLhxcaCn9SDfrvNIuiUtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/workspace/staging
+[staging] $ /bin/sh -xe /tmp/jenkins4547785897578245338.sh
++ git checkout staging
+fatal: Not a git repository (or any parent up to mount point /var/jenkins_home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
